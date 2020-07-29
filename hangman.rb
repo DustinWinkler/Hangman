@@ -41,6 +41,10 @@ class Game
   end
 end
 
+unless Dir.exist?('Saves')
+  Dir.mkdir('Saves')
+end
+
 saves = Dir.children('Saves') 
 save_opened = false
 puts "Would you like to load a save? Y/N?"
